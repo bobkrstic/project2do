@@ -1,3 +1,10 @@
+TO START THIS PROJECT:
+
+1. git clone https://github.com/bobkrstic/project2do.git
+2. npm install
+3. npm start
+4. the project will run on your first available local host address
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
