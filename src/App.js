@@ -12,32 +12,32 @@ class App extends Component {
     todos: [
       {
         id: uuidv4(),
-        title: "Take out the trash",
-        completed: false
+        title: "Go to the bank",
+        completed: false,
       },
       {
         id: uuidv4(),
         title: "Study",
-        completed: false
+        completed: false,
       },
       {
         id: uuidv4(),
         title: "Hike",
-        completed: false
-      }
-    ]
+        completed: false,
+      },
+    ],
   };
 
   // this id is passed from TodoItem
-  markComplete = id => {
+  markComplete = (id) => {
     // console.log(id);
     this.setState({
-      todos: this.state.todos.map(todo => {
+      todos: this.state.todos.map((todo) => {
         if (todo.id === id) {
           todo.completed = !todo.completed;
         }
         return todo;
-      })
+      }),
     });
   };
 
@@ -45,20 +45,20 @@ class App extends Component {
   // the function goes: loop through the array (state) and
   // return that array without the id that was matched with
   // the id passed from the TodoItem
-  delTodo = id => {
+  delTodo = (id) => {
     this.setState({
-      todos: [...this.state.todos.filter(todo => todo.id !== id)]
+      todos: [...this.state.todos.filter((todo) => todo.id !== id)],
     });
   };
 
   // Add Todo
   // title is passed from the component
-  addTodo = title => {
+  addTodo = (title) => {
     // console.log(title);
     const newTodo = {
       id: uuidv4(),
       title: title,
-      completed: false
+      completed: false,
     };
     this.setState({ todos: [...this.state.todos, newTodo] });
   };
