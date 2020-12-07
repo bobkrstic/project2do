@@ -2,16 +2,17 @@ import React, { Component } from "react";
 
 class AddTodo extends Component {
   state = {
-    title: ""
+    title: "",
   };
 
-  onChange = e => {
+  onChange = (e) => {
     this.setState({
-      [e.target.name]: e.target.value
+      // for multiple fields - name, password, email...
+      [e.target.name]: e.target.value,
     });
   };
 
-  onSubmit = e => {
+  onSubmit = (e) => {
     e.preventDefault();
     // console.log("submit");
     this.props.addTodo(this.state.title);

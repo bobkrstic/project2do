@@ -47,6 +47,7 @@ class App extends Component {
   // the id passed from the TodoItem
   delTodo = (id) => {
     this.setState({
+      // with the spread operator we copy the array "todos"
       todos: [...this.state.todos.filter((todo) => todo.id !== id)],
     });
   };

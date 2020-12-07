@@ -8,14 +8,14 @@ export class TodoItem extends Component {
         background: "#f4f4f4",
         padding: "10px",
         borderBottom: "1px #ccc solid",
-        textDecoration: "line-through"
+        textDecoration: "line-through",
       };
     } else {
       return {
         background: "#f8f4f4",
         padding: "10px",
         borderBottom: "1px #ccc solid",
-        textDecoration: "none"
+        textDecoration: "none",
       };
     }
   };
@@ -38,6 +38,7 @@ export class TodoItem extends Component {
           />
           {"    "}
           {title}
+          {/* passing the id as well */}
           <button onClick={this.props.delTodo.bind(this, id)} style={btnStyle}>
             X
           </button>
@@ -47,9 +48,9 @@ export class TodoItem extends Component {
   }
 }
 
-// PropTypes
+// PropTypes - todo is an object
 TodoItem.propTypes = {
-  todo: PropTypes.object.isRequired
+  todo: PropTypes.object.isRequired,
 };
 
 const btnStyle = {
@@ -59,7 +60,7 @@ const btnStyle = {
   padding: "5px 10px",
   borderRadius: "20%",
   cursor: "pointer",
-  float: "right"
+  float: "right",
 };
 
 export default TodoItem;
